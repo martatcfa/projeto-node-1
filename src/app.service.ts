@@ -51,17 +51,9 @@ export class AppService {
       cliente => cliente.id == id
     );
 
-    //Cria um novo registro
-    const alterarCliente = new Cliente(
-      id, 
-      cliente.nome,
-      cliente.email,
-      cliente.anoNacimento
-    );
-
     //Atualiza o registro
-    this.listaClientes[indice] = alterarCliente;
-    return alterarCliente;
+    this.listaClientes[indice] = cliente;
+    return cliente;
   }
 
   public excluir(id:number): void{
@@ -93,3 +85,6 @@ export class AppService {
     }
   }
 }
+
+
+
