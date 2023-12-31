@@ -55,5 +55,4 @@ export class AppController {
 
     this.appService.excluir(id);
   }
-  
 }

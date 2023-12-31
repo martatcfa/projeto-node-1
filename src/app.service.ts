@@ -10,7 +10,7 @@ export class AppService {
   constructor(){
     const client1 = new Cliente(1,'Alice Almeida','alice@teste.com.br', 2010);
     const client2 = new Cliente(2,'Carlos Alberto','carlos@teste.com.br', 2007);
-    const client3 = new Cliente(3,'Alice Almeida','teste1@gmail.com', 20);
+    const client3 = new Cliente(3,'Alice Almeida','teste1@gmail.com', 2003);
 
     //Adiciona os objetos ao array
     this.listaClientes.push(client1, client2, client3);
@@ -85,6 +85,3 @@ export class AppService {
     }
   }
 }
-
-
-
