@@ -23,14 +23,14 @@ export class AppController {
 
   @Get("/clientes") //Exemplo: http://localhost:3000/clientes
   listarTodosClicentes():Array<Cliente> {
-    console.log("Entrou no método: listarTodosClicentes");
+    console.log("Entrou no método: listarTodosClicentes "+ new Date());
 
     return this.appService.listarTodos();
   }
 
   @Get("/cliente") //Exemplo: http://localhost:3000?id=1
   public buscarPorId(@Query('id') id:number): Cliente {
-    console.log("Entrou no método: buscarPorId");
+    console.log("Entrou no método: buscarPorId "+ new Date());
 
     return this.appService.buscarPorId(id);
   }
@@ -44,14 +44,14 @@ export class AppController {
 
   @Put(':id')
   public alterar(@Param('id') id: number, @Body() cliente: Cliente ) : Cliente{
-    console.log("Entrou no método: alterar");
+    console.log("Entrou no método: alterar "+ new Date());
       
     return this.appService.atualizar(id, cliente);
   }
 
   @Delete(':id')
   public excluir(@Param('id') id: number){
-    console.log("Entrou no método: delete");
+    console.log("Entrou no método: delete "+ new Date());
 
     this.appService.excluir(id);
   }
